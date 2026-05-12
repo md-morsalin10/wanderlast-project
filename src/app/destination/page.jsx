@@ -1,3 +1,4 @@
+import DestinationCard from '@/components/DestinationCard';
 import React from 'react';
 
 const DestinationPage = async() => {
@@ -7,8 +8,13 @@ const DestinationPage = async() => {
     console.log(data, "destination data");
     
     return (
-        <div>
-            <h2>total: {data.length}</h2>
+        <div className='container mx-auto'>
+            <h2 className='text-4xl font-semibold'>Explore All Destination</h2>
+            <div className='p-5 grid grid-cols-3 gap-5'>
+                {
+                    data.map(des=> <DestinationCard key={des._id} des={des}/>)
+                }
+            </div>
         </div>
     );
 };
