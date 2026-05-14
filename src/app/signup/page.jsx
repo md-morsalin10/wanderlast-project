@@ -5,6 +5,7 @@ import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import { authClient } from '@/lib/auth-client';
 import { redirect } from 'next/navigation';
+import { FcGoogle } from 'react-icons/fc';
 
 const SignUpPage = () => {
     const onSubmit = async (e) => {
@@ -28,10 +29,15 @@ const SignUpPage = () => {
         if (error) {
             alert(error.message)
         }
-
-
-
     }
+
+    const handleGoogleBtn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    }
+
+
     return (
         <div className='max-w-7xl mx-auto my-10'>
             <Card className='border mx-auto rounded-none'>
@@ -103,6 +109,14 @@ const SignUpPage = () => {
                         </Button>
                     </div>
                 </Form>
+                <div className='flex justify-center items-center'>
+                    <span>OR</span>
+                </div>
+                <div>
+                    <Button
+                        onClick={handleGoogleBtn}
+                        variant='outline' className={'rounded-none w-full flex items-center'}><FcGoogle /> Continue With Google</Button>
+                </div>
             </Card>
         </div>
     );
