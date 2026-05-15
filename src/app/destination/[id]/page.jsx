@@ -1,3 +1,4 @@
+import BookingCard from '@/components/BookingCard';
 import { DeleteDestination } from '@/components/DeleteDestination';
 import { EditModal } from '@/components/EditModal';
 import { Button } from '@heroui/react';
@@ -47,14 +48,7 @@ const DestinationDetails = async ({ params }) => {
 
                 </div>
                 <div className='w-1/3 border rounded-2xl space-y-6 p-6'>
-                    <div>
-                        <p>Starting From</p>
-                        <p className='text-xl text-cyan-500 font-medium'>${price}</p>
-                        <span className='text-lg font-normal text-gray-500'>person</span>
-                    </div>
-                    <p>{departureDate}</p>
-
-                    <Button className={'w-full'}>Book Now</Button>
+                  <BookingCard destination={destination}/>
                 </div>
             </div>
         </div>
