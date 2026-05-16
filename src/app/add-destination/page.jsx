@@ -1,5 +1,7 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
 import { FieldError, Input, Label, TextField, Select, ListBox, TextArea, Button, Card } from '@heroui/react';
+import { redirect } from 'next/navigation';
 import React from 'react';
 
 const AddDestination = () => {
@@ -8,19 +10,26 @@ const AddDestination = () => {
         const formData = new FormData(e.currentTarget);
         const destinations = Object.fromEntries(formData.entries())
 
-        console.log(destinations);
+        // console.log(destinations);
+         
+
+       const {data: tokenData} = await authClient.token();
+       console.log(tokenData, 'form add destination');
+       
 
         const res = await fetch('http://localhost:5000/destination', {
             method:"POST",
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `Bearer ${tokenData?.token}`
             },
             body:JSON.stringify(destinations)
         })
 
         const data = await res.json();
-        console.log(data, "data from client");
+        // console.log(data, "data from client");
         alert('data added successfully')
+        redirect('/destination')
         
     }
 

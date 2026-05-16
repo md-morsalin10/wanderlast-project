@@ -1,4 +1,5 @@
 "use client"
+
 import { authClient } from '@/lib/auth-client';
 import { Button, DateField, Label } from '@heroui/react';
 import React, { useState } from 'react';
@@ -27,11 +28,16 @@ const BookingCard = ({ destination }) => {
             departureDate: new Date(departureDate)
         }
         console.log(bookingData);
+        
+        const {data:tokenData} = await authClient.token()
+        console.log(tokenData);
+        
 
         const res = await fetch('http://localhost:5000/booking', {
             method: "POST",
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `Bearer ${tokenData?.token}`
             },
             body: JSON.stringify(bookingData)
         })
