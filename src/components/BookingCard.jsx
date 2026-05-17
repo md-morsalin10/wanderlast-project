@@ -2,6 +2,7 @@
 
 import { authClient } from '@/lib/auth-client';
 import { Button, DateField, Label } from '@heroui/react';
+import { redirect } from 'next/navigation';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 
@@ -33,7 +34,7 @@ const BookingCard = ({ destination }) => {
         console.log(tokenData);
         
 
-        const res = await fetch('http://localhost:5000/booking', {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking`, {
             method: "POST",
             headers: {
                 'content-type': 'application/json',
@@ -44,6 +45,7 @@ const BookingCard = ({ destination }) => {
         const data = await res.json();
         toast.success('Booking Successful')
         // console.log(data);
+        redirect("/destination")
 
     }
 

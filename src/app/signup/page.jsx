@@ -39,7 +39,7 @@ const SignUpPage = () => {
 
 
     return (
-        <div className='max-w-7xl mx-auto my-10'>
+        <div className='max-w-7xl mx-auto my-20'>
             <Card className='border mx-auto rounded-none'>
                 <Form
                     className="flex w-96 flex-col gap-4"

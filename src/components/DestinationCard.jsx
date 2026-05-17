@@ -11,7 +11,7 @@ const DestinationCard = ({ des }) => {
     const { _id, price, imageUrl, duration, destinationName, departureDate, country, category } = des
 
     return (
-        <div className='p-5 border rounded-2xl'>
+        <div className='p-5 border rounded-2xl py-2'>
             <div className='relative w-full aspect-square'>
                 <Image
                     src={imageUrl}

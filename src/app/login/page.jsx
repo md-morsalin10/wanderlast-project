@@ -31,7 +31,7 @@ const LoginPage = () => {
 
     }
     return (
-        <div className='max-w-7xl mx-auto my-10'>
+        <div className='max-w-7xl mx-auto my-20'>
             <Card className='border mx-auto rounded-none'>
                 <div className='text-center py-2'>
                     <h2 className='text-2xl font-bold'>Login Your Account</h2>
