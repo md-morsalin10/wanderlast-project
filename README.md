@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🗺️ Wanderlust - Premium Travel & Hotel Booking Platform
 
-## Getting Started
+**Wanderlust** is a premium, modern, and full-featured MERN stack travel booking application designed to provide users with a seamless experience for discovering destinations, booking luxury stays, and managing itineraries. Built with an elegant dark-themed UI/UX, optimized state management, and robust security workflows.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📸 Application Previews
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🌌 Immersive Hero & Destination Explorer
+<img width="1363" height="634" alt="Wanderlust Home Page" src="https://github.com/user-attachments/assets/17457041-f832-4ed8-a006-317c95583463" />
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🖥️ Interactive Bookings & Dashboard Management
+<table>
+  <tr>
+    <td width="50%">
+      <p align="center"><b>🔍 Destination Explorer</b></p>
+      <img width="1363" height="636" alt="Destination Listings" src="https://github.com/user-attachments/assets/b5bb9746-4820-4e3b-af40-10f5dbbf7941" />
+    </td>
+    <td width="50%">
+      <p align="center"><b>👤 User Travel Dashboard & Bookings</b></p>
+      <img width="1365" height="635" alt="User Dashboard" src="https://github.com/user-attachments/assets/9be48e6c-101f-4915-b64e-14db434deba2" />
+    </td>
+  </tr>
+</table>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Live Demo & Repository Links
+- **✨ Live Application:** [https://wanderlust-code.vercel.app](https://wanderlust-code.vercel.app)
+- **🖥️ Frontend Repository (Client):** [https://github.com/md-morsalin10/Wanderlust-Frontend](https://github.com/md-morsalin10/Wanderlust-Frontend)
+- **⚙️ Backend Repository (Server):** [https://github.com/md-morsalin10/wanderlust-server](https://github.com/md-morsalin10/wanderlust-server)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Key Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🌟 Core Capabilities
+- **Effortless Travel Booking:** Browse, explore, and book travel destinations or hotel slots instantly.
+- **Dynamic Pricing & Slot Computation:** Real-time calculation of total travel costs based on stay durations, capacity, and premium add-ons.
+- **Flawless Dark Aesthetics:** Implemented with a polished, luxury dark-themed layout using Tailwind CSS and modern UI libraries.
+- **Pixel-Perfect Responsiveness:** Fully fluid layouts meticulously tested across desktop, tablet, and mobile breakpoints.
 
-## Deploy on Vercel
+### 👤 For Travelers / Users
+- **Advanced Dynamic Filtering:** Search and filter hotels or tours by location, cost parameters, host ratings, and custom amenities (Wi-Fi, Pool, Gym, Guided Tours).
+- **Comprehensive User Dashboard:** Monitor current active trips, historical bookings, and seamlessly process itinerary cancellations with immediate backend synchronization.
+- **Robust Meta Configuration:** Smooth client routing integrated with page-specific browser dynamic titles, fully avoiding hydration mismatches.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔐 Security & Middleware
+- **Protected Action Routes:** Secure backend integration requiring token-based access verification before finalizing bookings or manipulating data.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🛠️ Tech Stack & Architecture
+
+### Frontend (Client-Side)
+- **Framework:** Next.js 14+ / React.js (Component-Based Single Page Architecture)
+- **UI Components:** HeroUI (formerly NextUI) & Custom Tailwind Design Tokens
+- **Styling:** Tailwind CSS (Utility-first styling with deep modern dark theme integration)
+- **State Management & Routing:** Optimized Client Hooks and App-Router configurations
+- **Feedback & Interactions:** Rich notifications and interactive animations using modern NPM utility libraries
+
+### Backend (Server-Side)
+- **Runtime Environment:** Node.js
+- **Framework:** Express.js (Restful API Architecture)
+- **Database:** MongoDB (Native Driver / Atlas Cloud Infrastructure)
+- **Security:** JSON Web Tokens (JWT) for authentication state guardrails, CORS security configurations, and secure environment variables
